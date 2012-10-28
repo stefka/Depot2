@@ -1,0 +1,11 @@
+<% if notice %>
+    <p id="notice"><%= notice %></p>
+<% end %>
+
+<%= render @cart  %>
+
+<% if session[:counter] > 2 %>
+    Cart accessed: <%= pluralize(session[:counter], 'time', 'times')  %>!!!
+<% end %>
+
+<%= link_to 'Back', store_path %>
